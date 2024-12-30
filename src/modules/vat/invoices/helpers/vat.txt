@@ -1,0 +1,25 @@
+// vatAmount2:
+// This corresponds to "Tax refunds provided to tourists" with Amount_AED: 0 and VAT_Amount_AED: 0.
+// Since both the amount and VAT are zero, it’s likely intended as a non - taxable entry, and this field should be excluded from the VAT check.
+
+//vatAmount3:
+// This represents "Supplies subject to reverse charge provisions" with Amount_AED: 20000 but VAT_Amount_AED: 0.
+// The reverse charge mechanism usually shifts VAT liability to the recipient, so vatAmount3 should be zero and excluded from the check.
+
+//vatAmount4:
+// This field corresponds to "Zero-rated supplies" with Amount_AED: 12000 and no VAT.
+// Zero - rated supplies mean VAT is 0 % by definition, so vatAmount4 should be excluded from the validation.
+
+//vatAmount5:
+// This field aligns with "Exempt supplies" with Amount_AED: 6000 and no VAT.
+// Exempt supplies are not subject to VAT, so vatAmount5 should also be excluded.
+
+//vatAmount7:
+// This corresponds to "Adjustments to goods imported into the UAE" with both Amount_AED: 0 and VAT_Amount_AED: 0.
+// This entry is non - taxable with zero values, so vatAmount7 should be excluded from validation as well.
+
+// vatAmount12 and vatAmount13:
+// These relate to net VAT calculations for the period, such as the total value of due tax or recoverable tax.The net VAT might be an aggregate field or derived differently, so they might not align directly with individual VAT calculations.
+
+
+api/vatflingd/id
